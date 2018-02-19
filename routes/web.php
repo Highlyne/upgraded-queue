@@ -12,7 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $jobs = App\Jobs::all();
+    return view('welcome',compact('jobs'));
+    // return $jobs;
 });
 Route::get('/user','UsersController@index');
 Route::get('/book','BookController@index');

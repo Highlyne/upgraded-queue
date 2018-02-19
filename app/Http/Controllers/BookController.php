@@ -26,6 +26,7 @@ class BookController extends Controller
     public function create()
     {
         //
+        return view('book.res_form');
     }
 
     /**

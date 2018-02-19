@@ -9,6 +9,9 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
         <!-- Styles -->
         <style>
@@ -65,6 +68,39 @@
         </style>
     </head>
     <body>
+        <div class="container">
+            <div class="jumbotron">
+                    <a id='uqu3zdFJRjdaMVwJsyRA-A' class='gie-single' href='http://www.gettyimages.com/detail/621182378' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'uqu3zdFJRjdaMVwJsyRA-A',sig:'BH2h0Cvrz03a_ut_nGaotCEZ_kYKwm1M6KsjdS4uc2E=',w:'508px',h:'339px',items:'621182378',caption: false ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
+            </div>
+        </div>
+        <br>
+
+        <a href="/book" class="btn btn-info" role="button">Book Now</a>
+        <hr>
+        <p> database queue will go here </p>
+<div class="queuelog">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach ($jobs as $job)
+        <td>{{ $job->book_date }}</td>
+            @endforeach   
+            @foreach ($jobs as $job)
+        <td>{{ $job->time }}</td>
+        @endforeach
+        @foreach ($jobs as $job)
+        <td>{{ $job->name }}</td>
+    @endforeach
+</tbody>
+
+</div>
+
+
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
