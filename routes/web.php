@@ -17,4 +17,8 @@ Route::get('/', function () {
     // return $jobs;
 });
 Route::get('/user','UsersController@index');
-Route::get('/book','BookController@index');
+Route::get('/book','BookController@create');
+Route::get('/barber','BookController@index');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
