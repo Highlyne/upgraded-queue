@@ -8,17 +8,22 @@
     <div class="row">
         <div class="col-sm-4">
           <a id='XYHHj252R8Z9_uLAWqAnGw' class='gie-single' href='http://www.gettyimages.com/detail/82796066' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'XYHHj252R8Z9_uLAWqAnGw',sig:'ykobd1GYwfmtHNA4DT0vq_0nmJzxtBCD6Vxgjz4q3So=',w:'431px',h:'398px',items:'82796066',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
-          <a href="/book/oliver" class="btn btn-info" role="button">Oliver Short</a>
+          <a href="/book/oliver" onclick="showBarberAvail()" class="btn btn-info" role="button">Oliver Short</a>
           </div>
         <div class="col-sm-4">
+            <div id="theresa">
         <a id='7wfQaU-1S6VpsgQ4mg7sNg' class='gie-single' href='http://www.gettyimages.com/detail/724228177' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'7wfQaU-1S6VpsgQ4mg7sNg',sig:'909FKwKhYAoKo70fZkgEsr3NWekRQnyycpky32A6LkU=',w:'431px',h:'398px',items:'724228177',caption: false ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
         <a href="/book/theresa" class="btn btn-info" role="button">Theresa Smith</a>  
+            </div>
       </div>
         <div class="col-sm-4">
+            <div id="greg">
         <a id='nt7IUQnQSL5YPa6-qQhcQA' class='gie-single' href='http://www.gettyimages.com/detail/573106855' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'nt7IUQnQSL5YPa6-qQhcQA',sig:'QHX6gni8hgpghZXOEP6uvXyRpfIEe3F1EEJor0QYcck=',w:'431px',h:'398px',items:'573106855',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
         <a href="/book/greg" class="btn btn-info" role="button">Greg Brown</a>  
+            </div>
       </div>
     </div>
+
     <div class="row">
         <div class="col-sm-3"> </div>
       <div class="col-sm-3"> 

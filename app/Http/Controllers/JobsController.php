@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Jobs;
 
-class BookController extends Controller
+
+class JobsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +15,19 @@ class BookController extends Controller
      */
     public function index()
     {
-        //
+        // This function will return the booking option
         return view('book.index');
     }
 
+    /**
+     * @return \Illuminate\Http\Response
+     */
+    public function show_avail()
+    {
+        // This function will return the booking option
+        $appts = Jobs::where('barber', 'Oliver')->get();
+        return view('book.res_form', compact('appts'));
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -27,8 +37,15 @@ class BookController extends Controller
     public function create()
     {
         //
-        showBarberAvail();
-        return view('book.res_form');
+
+        $jobs = App\Jobs::forceCreate([
+            'id' => '1',
+            'book_date' => '2018-03-01',
+            'time' => '11:00:00',
+            'name' => 'Peter Parker',
+            'barber' => 'Oliver',
+            'confirmed' => '0'
+            ]);
     }
 
     /**

@@ -16,8 +16,8 @@ Route::get('/', function () {
     return view('welcome',compact('jobs'));
     // return $jobs;
 });
-Route::get('/user','UsersController@index');
-Route::get('/book','BookController@create');
+Route::get('/book/oliver','JobsController@show_avail');
+Route::get('/book','JobsController@index');
 Route::get('/barber','BookController@index');
 Auth::routes();
 
