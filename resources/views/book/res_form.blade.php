@@ -13,11 +13,6 @@
         </div>
         <div class="col-sm-8">
             <div class="row">
-                <form action="/action_page.php">
-                    Select a day: <input type="date" name="res_day">  Select a time:<input type="time" name="usr_time"> <class="btn btn-info" role="button">submit</a> 
-                </form>
-            </div>
-            <div class="row">
                     <table>
                             <thead>
                     <tr>
@@ -37,8 +32,13 @@
             </tbody>
                 </table>
         </div>
+        <div class="row">
+            <hr>
+                <form action="/action_page.php">
+                    Select a day: <input type="date" name="res_day">  Select a time:<input type="time" name="usr_time"> <button class="btn btn-info" role="button">submit</button> 
+                </form>
+            </div>
     </div>
 </div>
-<hr>
 
 @stop
