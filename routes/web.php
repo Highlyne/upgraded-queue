@@ -17,7 +17,7 @@ Auth::routes();
 // Route to go show booking page--pick the barber
 Route::get('/book','PageController@index');
 // ========Routes that call upon each barber's controller========
-Route::get('/book/oliver','JobsController@show_avail');
+Route::get('/book/oliver','OliverController@index');
 
 Route::get('/barber','BookController@index');
 
