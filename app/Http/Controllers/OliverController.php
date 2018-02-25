@@ -24,19 +24,21 @@ class OliverController extends Controller
     /**
      * Show the form for creating a new resource.
      *
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
         //
-        $jobs = App\Jobs::forceCreate([
-            'id' => '1',
-            'book_date' => '2018-03-01',
-            'time' => '11:00:00',
-            'name' => 'Peter Parker',
+        $jobs = Jobs::forceCreate([
+            'book_date' => $request->res_day,
+            'time' => $request->res_time,
+            'name' => $request->name,
             'barber' => 'Oliver',
             'confirmed' => '0'
             ]);
+        return back();
+
     }
 
     /**
@@ -48,6 +50,7 @@ class OliverController extends Controller
     public function store(Request $request)
     {
         //
+        return $request->all();
     }
 
     /**

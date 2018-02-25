@@ -23,4 +23,8 @@ Route::get('/barber','BookController@index');
 
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//======= Post route to add new appointments to the DB==========
+
+Route::post('/book/Oliver/new_appt','OliverController@create');
  

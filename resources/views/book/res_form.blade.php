@@ -33,10 +33,15 @@
                 </table>
         </div>
         <div class="row">
-            <hr>
-                <form action="/action_page.php">
-                    Select a day: <input type="date" name="res_day">  Select a time:<input type="time" name="usr_time"> <button class="btn btn-info" role="button">submit</button> 
+            <hr> 
+            <div class="form-group">
+                <form method="POST" action="/book/{{ $barberInfo[0] }}/new_appt">
+                    {{ csrf_field() }} 
+                    Name: <input type="text" name="name"><br>
+                    Select a day: <input type="date" name="res_day">  Select a time:<input type="time" name="res_time"> <button class="btn btn-info" type="submit">submit</button> 
+              
                 </form>
+            </div>
             </div>
     </div>
 </div>
