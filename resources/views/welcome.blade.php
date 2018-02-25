@@ -15,7 +15,6 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                <p> database queue will go here </p> 
                 
                 </div>
             </div>
@@ -27,6 +26,7 @@
                     <th>Date</th>
                     <th>Time</th>
                     <th>Name</th>
+                    <th>Barber</th>
                 </tr>
             </thead>
             <tbody>
@@ -35,6 +35,7 @@
                 <td>{{ $job->book_date }}</td>
                 <td>{{ $job->time }}</td>
                 <td>{{ $job->name }}</td>
+                <td>{{ $job->barber }}</td>
                 <td>@if ($job->confirmed === 1)
                         <i class="fas fa-check"></i>
                         @endif

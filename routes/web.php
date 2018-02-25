@@ -26,5 +26,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //======= Post route to add new appointments to the DB==========
 
-Route::post('/book/Oliver/new_appt','OliverController@create');
- 
+Route::post('/book/Oliver/new_appt','OliverController@create')->middleware('subscriber');;
+
+// =========== Administrator routes ============================
+Route::post('/Oliver/admin', 'OliverController@destroy')->middleware('administrator');

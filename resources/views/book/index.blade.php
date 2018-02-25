@@ -24,20 +24,6 @@
       </div>
     </div>
 
-    <div class="row">
-        <div class="col-sm-3"> </div>
-      <div class="col-sm-3"> 
-          <form action="/action_page.php">
-            Select a day: <input type="date" name="res_day">
-      </div>
-      <div class="col-sm-3">
-            Select a time:
-            <input type="time" name="usr_time">
-      </div>
-      <div class="col-sm-3"> </div>
-    </div>
-
-
 </div>
 
 @stop
