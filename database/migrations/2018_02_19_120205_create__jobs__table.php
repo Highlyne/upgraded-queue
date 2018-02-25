@@ -14,12 +14,14 @@ class CreateJobsTable extends Migration
     public function up()
     {
         Schema::create('Jobs', function (Blueprint $table) {
-            $table->autoincrement('id');
+            $table->increments('id');
             $table->date('book_date');
             $table->time('time');
-            $table->varchar('name');
-            $table->varchar('barber');
+            $table->string('name');
+            $table->string('barber');
             $table->boolean('confirmed')->default(0);
+            $table->date('created_at')->useCurrent();
+            $table->date('updated_at')->useCurrent();
            
         });
         

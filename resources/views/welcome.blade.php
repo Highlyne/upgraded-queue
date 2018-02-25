@@ -35,6 +35,10 @@
                 <td>{{ $job->book_date }}</td>
                 <td>{{ $job->time }}</td>
                 <td>{{ $job->name }}</td>
+                <td>@if ($job->confirmed === 1)
+                        <i class="fas fa-check"></i>
+                        @endif
+                    </td>
             </tr>
             @endforeach
         </tbody>
