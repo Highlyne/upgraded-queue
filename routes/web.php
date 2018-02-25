@@ -10,15 +10,17 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    $jobs = App\Jobs::all();
-    return view('welcome',compact('jobs'));
-    // return $jobs;
-});
-Route::get('/book/oliver','JobsController@show_avail');
-Route::get('/book','JobsController@index');
-Route::get('/barber','BookController@index');
+// Route to show home page--start of app
+Route::get('/', 'PageController@home');
+// Route for user athuthenication
 Auth::routes();
+// Route to go show booking page--pick the barber
+Route::get('/book','PageController@index');
+// ========Routes that call upon each barber's controller========
+Route::get('/book/oliver','JobsController@show_avail');
+
+Route::get('/barber','BookController@index');
+
 
 Route::get('/home', 'HomeController@index')->name('home');
+ 

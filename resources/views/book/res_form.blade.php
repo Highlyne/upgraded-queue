@@ -4,6 +4,42 @@
     <hr>
 <p>Choose a barber from below to schedule an appointment with</p>
 <br>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-4">
+                <img src='{{$barberPic}}'> 
+                <img src="https://www.istockphoto.com/photo/little-boy-getting-his-head-shaved-by-barber-gm464406044-58482742">
+        </div>
+        <div class="col-sm-8">
+            <div class="row">
+                <form action="/action_page.php">
+                    Select a day: <input type="date" name="res_day">  Select a time:<input type="time" name="usr_time"> <class="btn btn-info" role="button">submit</a> 
+                </form>
+            </div>
+            <div class="row">
+                    <table>
+                            <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach ($appts as $appt)
+                <tr>
+                    <td>{{ $appt->book_date }}</td>
+                    <td>{{ $appt->time }}</td>
+                    <td>{{ $appt->name }}</td>
+                </tr>
+                @endforeach
+            </tbody>
+                </table>
+        </div>
+    </div>
+</div>
+<hr>
 <div class="container-fluid">
     <div class="row">
         <div class="col-sm-4">
@@ -70,6 +106,7 @@
     </div>
 
 </div>
+
 
 
 @stop

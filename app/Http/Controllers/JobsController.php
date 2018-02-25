@@ -8,6 +8,9 @@ use App\Jobs;
 
 class JobsController extends Controller
 {
+
+   
+
     /**
      * Display a listing of the resource.
      *
@@ -24,9 +27,10 @@ class JobsController extends Controller
      */
     public function show_avail()
     {
+        $barberPic = 'http://www.gettyimages.com/detail/82796066';
         // This function will return the booking option
         $appts = Jobs::where('barber', 'Oliver')->get();
-        return view('book.res_form', compact('appts'));
+        return view('book.res_form', compact('appts', 'barberPic'));
     }
 
     /**
