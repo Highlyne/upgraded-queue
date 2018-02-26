@@ -14,66 +14,57 @@
     {{--  <link href="{{ asset('css/app.css') }}" rel="stylesheet">  --}}
     {{--  Font awesome icons  --}}
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    
+    {{--  <!-- Latest compiled and minified CSS -->  --}}
+    {{--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">  --}}
+    {{--  Link to Bulma CSS   --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css">
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body>
+   
+    <div class="container is-fluid">
     {{--  Here is the nav bar that includes the user login options  --}}
-    <div class="container">
-        <div id="app">
-            <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
-                <div class="container">
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <!-- Left Side Of Navbar -->
-                        <ul class="navbar-nav mr-auto">
-
-                        </ul>
-
-                        <!-- Right Side Of Navbar -->
-                        <ul class="navbar-nav ml-auto">
-                            <!-- Authentication Links -->
-                            @guest
-                                <li><a class="nav-link" href="{{ route('login') }}">Login</a></li>
-                                <li><a class="nav-link" href="{{ route('register') }}">Register</a></li>
-                            @else
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        {{ Auth::user()->name }} <span class="caret"></span>
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                                                        document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
-
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            @csrf
-                                        </form>
-                                    </div>
-                                </li>
-                            @endguest
-                        </ul>
-                    </div>
+        <div class="block">
+            <nav class="navbar">
+                <!-- Left Side Of Navbar -->
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="{{ url('/') }}"><h1 class="title is-2"> Hot Cutz</h1></a>
+                        {{--  {{ config('app.name', 'Hot Cutz') }}  --}}
                 </div>
-            </nav>
-    {{--  Here is the content of the page.  --}}
+                <!-- Center Of Navbar -->
+                <div class="navbar-start">
+                    <a href="" class="navbar-item"> <span class="icon"><i class="fab fa-twitter">
+                            </i>
+                        </span>
+                    </a>
+                <!-- Right Side Of Navbar -->
+                <div class="navbar-end navbar-menu is-active">
+                    <!-- Authentication Links -->
+                    @guest
+                        <a class="navbar-item" href="{{ route('login') }}">Login</a> 
+                        <a class="navbar-item" href="{{ route('register') }}">Register</a>
+                    @else
+                        <a class="navbar-item">{{ Auth::user()->name }}</a>
+                        <a class="navbar-item" href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                                document.getElementById('logout-form').submit();">
+                                    Logout
+                                </a>
 
-            <main class="py-4">
-                @yield('content')
-            </main>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+                    @endguest
+                </div>          
+            </nav>
         </div>
     </div>
+
+        {{--  Here is the content of the page.  --}}
+        <div class="container is-fluid">
+                @yield('content')
+        </div>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>

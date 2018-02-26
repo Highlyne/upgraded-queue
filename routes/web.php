@@ -17,10 +17,10 @@ Auth::routes();
 // Route to go show booking page--pick the barber
 Route::get('/book','PageController@index');
 // ========Routes that call upon each barber's controller========
-Route::get('/book/oliver','OliverController@index');
-
-Route::get('/barber','BookController@index');
-
+Route::get('/book/Oliver','OliverController@index');
+Route::get('/book/Theresa','ThresaController@index');
+Route::get('/book/Greg','GregController@index');
+// =================================================================
 
 Route::get('/home', 'HomeController@index')->name('home');
 
