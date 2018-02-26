@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Jobs;
 
 class GregController extends Controller
 {
@@ -14,16 +15,30 @@ class GregController extends Controller
     public function index()
     {
         //
+        $barberInfo = array("Greg", "<a id='nt7IUQnQSL5YPa6-qQhcQA' class='gie-single' href='http://www.gettyimages.com/detail/573106855' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'nt7IUQnQSL5YPa6-qQhcQA',sig:'QHX6gni8hgpghZXOEP6uvXyRpfIEe3F1EEJor0QYcck=',w:'431px',h:'398px',items:'573106855',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>");
+        // This function will return the booking option
+        $appts = Jobs::where('barber', 'Greg')->get();
+        return view('book.res_form', compact('appts', 'barberInfo'));
     }
 
     /**
      * Show the form for creating a new resource.
      *
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
         //
+        $jobs = Jobs::forceCreate([
+            'book_date' => $request->res_day,
+            'time' => $request->res_time,
+            'name' => $request->name,
+            'barber' => 'Greg',
+            'confirmed' => '0'
+            ]);
+        return back();
+
     }
 
     /**

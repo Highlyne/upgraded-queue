@@ -17,9 +17,9 @@ Auth::routes();
 // Route to go show booking page--pick the barber
 Route::get('/book','PageController@index');
 // ========Routes that call upon each barber's controller========
-Route::get('/book/Oliver','OliverController@index');
-Route::get('/book/Theresa','ThresaController@index');
-Route::get('/book/Greg','GregController@index');
+Route::get('/book/Oliver','OliverController@index')->middleware('auth');
+Route::get('/book/Theresa','ThresaController@index')->middleware('auth');
+Route::get('/book/Greg','GregController@index')->middleware('auth');
 // =================================================================
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -27,6 +27,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 //======= Post route to add new appointments to the DB==========
 
 Route::post('/book/Oliver/new_appt','OliverController@create')->middleware('auth');
+Route::post('/book/Theresa/new_appt','ThresaController@create')->middleware('auth');
+Route::post('/book/Greg/new_appt','GregController@create')->middleware('auth');
 
 // =========== Administrator routes ============================
 Route::post('/Oliver/admin', 'OliverController@destroy')->middleware('administrator');
