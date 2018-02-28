@@ -31,4 +31,7 @@ Route::post('/book/Theresa/new_appt','ThresaController@create')->middleware('aut
 Route::post('/book/Greg/new_appt','GregController@create')->middleware('auth');
 
 // =========== Administrator routes ============================
-Route::post('/Oliver/admin', 'OliverController@destroy')->middleware('administrator');
+Route::get('/admin', 'AdminController@index')->middleware('administrator');
+Route::post('/admin/delete/{{ $job->id }}', 'AdminController@destroy');
+Route::get('/admin/edit/{{ $job->id }}', 'AdminController@edit')->middleware('administrator');
+// Route::get('/admin/edit/{{ $job->id }}', 'PageController@home');

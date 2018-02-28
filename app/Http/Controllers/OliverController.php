@@ -93,8 +93,12 @@ class OliverController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy()
     {
         //
+        $barberInfo = array("Oliver", "<a id='w13R1AF9RptoZwLVt8YE0g' class='gie-single' href='http://www.gettyimages.com/detail/82796066' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'w13R1AF9RptoZwLVt8YE0g',sig:'spIwmlN1WwohFB0PFmR24OxB8aOpBV0ckvQYZaBjc-A=',w:'431px',h:'398px',items:'82796066',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>");
+        // This function will return the booking option
+        $appts = Jobs::where('barber', 'Oliver')->get();
+        return view('admin.index', compact('appts', 'barberInfo'));
     }
 }

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Jobs;
 
-class BookController extends Controller
+class AdminController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,9 @@ class BookController extends Controller
     public function index()
     {
         //
-        return view('book.index');
+        $jobs = Jobs::all();
+        return view('admin.index',compact('jobs'));
     }
-
 
     /**
      * Show the form for creating a new resource.
@@ -27,8 +27,6 @@ class BookController extends Controller
     public function create()
     {
         //
-        showBarberAvail();
-        return view('book.res_form');
     }
 
     /**
@@ -59,9 +57,11 @@ class BookController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Request $request)
     {
         //
+        $editJob=Jobs::find($request);
+        return view('admin.edit',compact('editJob'));
     }
 
     /**
@@ -82,8 +82,12 @@ class BookController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(id $id)
     {
         //
+        $job=Jobs::find($id);
+        $job->destroy($id);
+        return back();
     }
+
 }

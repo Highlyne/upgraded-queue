@@ -1,0 +1,39 @@
+body {
+    background-color: burlywood;
+    background-image: url("handmadepaper_@2X.png");
+    background-repeat: repeat;
+    background-position: center; 
+  }
+table#hours {
+     
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 50px;
+        text-align: center;    
+    
+  }
+
+  #wel-pic {
+      width: 75%;
+      padding-left: 15%;
+  }
+h3 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 3em;
+    color: black;
+}
+
+h4 {
+    font-family: 'Special Elite', cursive;
+}
+
+h5 {
+    font-family: 'Cabin Sketch', cursive;
+}
+#res-head {
+    text-align: center;
+}
+
+.admin-head {
+text-align: center;
+}

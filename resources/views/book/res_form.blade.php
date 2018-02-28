@@ -1,8 +1,11 @@
 @extends('layouts.app')
 @section('content')
-<h3>Book an appointment with</h3>
-<h1>{{ $barberInfo[0] }} </h1>
-    <hr>
+<div id="res-head">
+    <br>
+        <h4>Book an appointment with</h4>
+        <h3>{{ $barberInfo[0] }} </h3>
+</div>
+        <hr>
 <br>
 
 <div class="block">
@@ -37,6 +40,7 @@
                         {{ csrf_field() }} 
                         Name: <input type="text" name="name"><br>
                         Select a day: <input type="date" name="res_day">  Select a time:<input type="time" name="res_time"> <button class="button is-primary is-small is-focused" type="submit">submit</button> 
+                              </div>
                     </form>
                 </div>
         </div>

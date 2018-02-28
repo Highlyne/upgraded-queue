@@ -2,53 +2,71 @@
 @section('content')
 
        
-<div class="block">
-        <div class="columns">
-            <div class="column">
-                <figure class="image">
-                    <img src="http://retaildesignblog.net/wp-content/uploads/2017/07/Jack-the-Clipper-flagship-barbershop-by-FormRoom-London-UK-02.jpg">
+<section class="hero is-dark">
+        <div class="hero-body">
+                <figure class="is-fullwidth">
+              <img id="wel-pic"  src="https://magazinestbarbershop.com/wp-content/uploads/2016/09/a2.jpg">
                 </figure>
-                </div>
-            </div>
+        
         </div>
-    
-        <br>
-        <br>
-
-        <a href="/book" class="button is-primary is-focused" role="button">Book Now</a>
+      </section>
+        
 <hr>
-<div class="block">
-    <div class="box">            
-        <div class="row">
-                <div class="col-sm-12">
-                    <table class="table is-fullwidth is-striped">
-                        <thead>
-                        <tr>
-                            <th>Date</th>
-                            <th>Time</th>
-                            <th>Name</th>
-                            <th>Barber</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($jobs as $job)
-                        <tr>
-                            <td>{{ $job->book_date }}</td>
-                            <td>{{ $job->time }}</td>
-                            <td>{{ $job->name }}</td>
-                            <td>{{ $job->barber }}</td>
-                            <td>@if ($job->confirmed === 1)
-                                <i class="fas fa-check"></i>
-                            @endif
-                            </td>
-                        </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
+
+                <div class="tile is-ancestor">
+                    <div class="tile is-4 is-vertical is-parent">
+                        <div class="title is-child box">
+                                <p class"title"> Welcome </p>
+                                <h4>Thank you for visiting our site.  Please feel free to sign in and schedule an appointment with one of 
+                                    our well train barbers.  If you are not able to plan ahead, take a check out the queue log to find the best
+                                    time to walk in for a hair cut.  We look forward to seeing you real soon. </h4>
+                        </div>
+                        <div class="tile is-child box">
+                                <p class="title">Store Hours</p>
+                                <table class="table is-fullwidth is-striped is-narrow">
+                                        <tr>
+                                          <th>Tue - Fri</th>
+                                          <td>8.30am to 7.30pm</td>
+                                        </tr>
+                                        <tr>
+                                          <th>Sat:</th>
+                                          <td>6.30am to 8.30pm</td>
+                                        </tr>
+                                      </table>
+                            </div>
+                    </div>
+
+                    <div class="tile is-parent">
+                            <div class="tile is-child box">
+                              <p class="title">Queue Log</p>
+                            <table class="table is-fullwidth is-striped is-narrow is-bordered">
+                            <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Name</th>
+                                <th>Barber</th>
+                                <th>Finished</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($jobs as $job)
+                            <tr>
+                                <td>{{ $job->book_date }}</td>
+                                <td>{{ $job->time }}</td>
+                                <td>{{ $job->name }}</td>
+                                <td>{{ $job->barber }}</td>
+                                <td>@if ($job->confirmed === 1)
+                                    <i class="fas fa-check"></i>
+                                @endif
+                                </td>
+                            </tr>
+                                @endforeach
+                            </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
-            </div>
-    </div>
-</div>
 
 
 @stop
