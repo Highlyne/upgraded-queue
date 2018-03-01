@@ -12,7 +12,7 @@
 <div class="block">     
     <div class="tile is-parent">
         <div class="tile is-child box">
-            <p class="title">Queue Log</p>
+            <p class="title">Feb 28, 2018</p>
                 <table class="table is-fullwidth is-striped is-narrow is-bordered">
                     <thead>
                     <tr>
@@ -26,9 +26,10 @@
                     </tr>
                     </thead>
                     <tbody>
-                            <form method='POST'>
-                                    {{ csrf_field() }}
+                            
                         @foreach ($jobs as $job)
+                        <form method='POST'>
+                            {{ csrf_field() }}
                     <tr>
                         <td>{{ $job->book_date }}</td>
                         <td>{{ $job->time }}</td>
@@ -41,7 +42,8 @@
                             
                             @endif
                         </td>
-                        <td><a href="/admin/edit/{{ $job->id }}"><i class="fas fa-edit"></i></a></td>
+                        <td><a href="/admin/edit/{{ $job }}" action="AdminController@edit"><i class="fas fa-edit"></i></a>
+                        </td>
                         <td> 
                             <a href="/admin/delete/{{ $job->id }}" type="submit"><i class="fas fa-times"></i></a>
                         </form>

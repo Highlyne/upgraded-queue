@@ -17,12 +17,13 @@
                     <div class="tile is-4 is-vertical is-parent">
                         <div class="title is-child box">
                                 <p class"title"> Welcome </p>
+                                <br>
                                 <h4>Thank you for visiting our site.  Please feel free to sign in and schedule an appointment with one of 
-                                    our well train barbers.  If you are not able to plan ahead, take a check out the queue log to find the best
+                                    our experienced barbers.  If you are not able to plan ahead, take a check out the queue log to find the best
                                     time to walk in for a hair cut.  We look forward to seeing you real soon. </h4>
                         </div>
                         <div class="tile is-child box">
-                                <p class="title">Store Hours</p>
+                                <p class="title">Shop Hours</p>
                                 <table class="table is-fullwidth is-striped is-narrow">
                                         <tr>
                                           <th>Tue - Fri</th>
@@ -38,7 +39,7 @@
 
                     <div class="tile is-parent">
                             <div class="tile is-child box">
-                              <p class="title">Queue Log</p>
+                              <p class="title">Feb 28,2018</p>
                             <table class="table is-fullwidth is-striped is-narrow is-bordered">
                             <thead>
                             <tr>
