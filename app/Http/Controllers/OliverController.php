@@ -29,17 +29,31 @@ class OliverController extends Controller
      */
     public function create(Request $request)
     {
-        //
-        $jobs = Jobs::forceCreate([
-            'book_date' => $request->res_day,
-            'time' => $request->res_time,
-            'name' => $request->name,
-            'barber' => 'Oliver',
-            'confirmed' => '0'
-            ]);
-        return back();
+        // Need to make the appt time unique
 
+        $nRows = Jobs::where('barber', 'Oliver')->where('book_date', $request->res_day)->where('time', $request->res_time)->get()->count();
+
+        if ($nRows != 0 ) {
+                echo '<script language="javascript">';
+                echo 'alert("Whoops! This time is already taken.  Please select another time or date.")';
+                echo '</script>';
+                return back();
+        } else {
+            $jobs = Jobs::forceCreate([
+                'book_date' => $request->res_day,
+                'time' => $request->res_time,
+                'name' => $request->name,
+                'barber' => 'Oliver',
+                'confirmed' => '0'
+                ]);
+            echo "You are all set!";
+            return back();
+        }
+        
     }
+
+        
+
 
     /**
      * Store a newly created resource in storage.
