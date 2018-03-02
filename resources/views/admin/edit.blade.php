@@ -25,8 +25,9 @@
                         <th>Delete</th>
                     </tr>
                     </thead>
-                    <tbody>
-                        @foreach ($editJob as $job)
+                    {{--  <tbody>
+                        @for ($editJob as $job)
+                        {{ csrf_field() }}
                     <tr>
                         <td>{{ $job->book_date }}</td>
                         <td>{{ $job->time }}</td>
@@ -39,15 +40,14 @@
                             
                             @endif
                         </td>
-                        <td><a href="/"><i class="fas fa-edit"></i></a></td>
-                        <td><form method='POST' action="/admin/delete/{{$job->id}}">
-                            {{ csrf_field() }}
+                        <td><form method='GET' action="/admin/edit/{{$job->id}}"><i class="fas fa-edit"></i></a></td>
+                        <td><form method='GET' action="/admin/delete/{{$job->id}}">
                             <a href="/admin/delete/{{ $job->id }}" type="submit"><i class="fas fa-times"></i></a>
                         </form>
                         </td> 
                     </tr>
-                        @endforeach
-                    </tbody>
+                        @endfor
+                    </tbody>  --}}
                 </table>
         </div>
     </div>

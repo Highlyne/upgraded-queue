@@ -26,10 +26,8 @@
                     </tr>
                     </thead>
                     <tbody>
-                            
                         @foreach ($jobs as $job)
-                        <form method='POST'>
-                            {{ csrf_field() }}
+                        {{ csrf_field() }}
                     <tr>
                         <td>{{ $job->book_date }}</td>
                         <td>{{ $job->time }}</td>
@@ -42,11 +40,10 @@
                             
                             @endif
                         </td>
-                        <td><a href="/admin/edit/{{ $job }}" action="AdminController@edit"><i class="fas fa-edit"></i></a>
-                        </td>
-                        <td> 
+                        <td><form method='GET' action="/admin/edit/{{$job->id}}"><a href="/admin/edit/{{$job->id}}"><i class="fas fa-edit"></i></a></form></td>
+                        <td>< action="/admin/delete/{{$job->id}}">
                             <a href="/admin/delete/{{ $job->id }}" type="submit"><i class="fas fa-times"></i></a>
-                        </form>
+                        
                         </td> 
                     </tr>
                         @endforeach

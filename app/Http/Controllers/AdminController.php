@@ -46,9 +46,11 @@ class AdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request)
     {
         //
+        $jobs = Jobs::where('id', $request);
+        return dd($jobs);
     }
 
     /**
@@ -57,10 +59,12 @@ class AdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(array $request)
+    public function edit(Request $request)
     {
         {
-            dd($request->all());
+        $editJob = $request;
+
+        return view('admin.edit',compact('editJob'));
         }
     }
 
