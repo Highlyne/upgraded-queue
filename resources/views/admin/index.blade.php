@@ -26,6 +26,7 @@
                     </tr>
                     </thead>
                     <tbody>
+                        <form>
                         @foreach ($jobs as $job)
                         {{ csrf_field() }}
                     <tr>
@@ -33,14 +34,15 @@
                         <td>{{ $job->time }}</td>
                         <td>{{ $job->name }}</td>
                         <td>{{ $job->barber }}</td>
+                        <method='post' action="admin/update/{$id}"> 
                         <td>@if ($job->confirmed === 1)
-                            <i class="fas fa-check"></i>
+                            <a href="/"><i class="fas fa-check"></i>
                             @else 
-                            <a href="/"><i class="far fa-circle"></i></a>
+                            <a href="admin/show/{{$job->id}}/confirm"><i class="far fa-circle"></i></a>
                             
                             @endif
                         </td>
-                        <td><form method='GET' action="/admin/edit/{{$job->id}}"><a href="/admin/edit/{{$job->id}}"><i class="fas fa-edit"></i></a></form></td>
+                        <td><method='get' action="admin/show/{$id}"><a href="admin/show/{{$job->id}}"><i class="fas fa-edit"></i></a></form></td>
                         <td>< action="/admin/delete/{{$job->id}}">
                             <a href="/admin/delete/{{ $job->id }}" type="submit"><i class="fas fa-times"></i></a>
                         

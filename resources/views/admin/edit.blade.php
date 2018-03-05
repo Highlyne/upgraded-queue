@@ -12,7 +12,7 @@
 <div class="block">     
     <div class="tile is-parent">
         <div class="tile is-child box">
-            <p class="title">Queue Log</p>
+            <p class="title">Job #{{ $editJob->id }}</p>
                 <table class="table is-fullwidth is-striped is-narrow is-bordered">
                     <thead>
                     <tr>
@@ -20,34 +20,30 @@
                         <th>Time</th>
                         <th>Name</th>
                         <th>Barber</th>
-                        <th>Finished</th>
                         <th>Edit</th>
-                        <th>Delete</th>
                     </tr>
                     </thead>
-                    {{--  <tbody>
-                        @for ($editJob as $job)
-                        {{ csrf_field() }}
+                    <tbody>
+                        
                     <tr>
-                        <td>{{ $job->book_date }}</td>
-                        <td>{{ $job->time }}</td>
-                        <td>{{ $job->name }}</td>
-                        <td>{{ $job->barber }}</td>
-                        <td>@if ($job->confirmed === 1)
-                            <i class="fas fa-check"></i>
-                            @else 
-                            <a href="/"><i class="far fa-circle"></i></a>
-                            
-                            @endif
-                        </td>
-                        <td><form method='GET' action="/admin/edit/{{$job->id}}"><i class="fas fa-edit"></i></a></td>
-                        <td><form method='GET' action="/admin/delete/{{$job->id}}">
-                            <a href="/admin/delete/{{ $job->id }}" type="submit"><i class="fas fa-times"></i></a>
+                        <td>{{ $editJob->book_date }}</td>
+                        <td>{{ $editJob->time }}</td>
+                        <td>{{ $editJob->name }}</td>
+                        <td>{{ $editJob->barber }}</td>
+                    </tr>
+                    <tr>
+                        <form method='post' action="admin/edit/{{$editJob->id}}">
+                            {{ csrf_field() }} 
+                        <td><input class="input" type="date" name="date" placeholder="Appointment Date"></td>
+                        <td><input class="input" type="time" name="time" placeholder="Appointment Time"></td>
+                        <td><input class="input" type="text" name="name" placeholder="Client Name"></td>
+                        <td><input class="input" type="text" name="barber" placeholder="Barber"></td>
+                        <td><button class="button is-primary is-small is-focused" type="submit">Update</button></td>
                         </form>
                         </td> 
                     </tr>
-                        @endfor
-                    </tbody>  --}}
+                       
+                    </tbody>
                 </table>
         </div>
     </div>

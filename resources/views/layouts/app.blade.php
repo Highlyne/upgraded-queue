@@ -13,6 +13,7 @@
     {{--  <!-- Latest compiled and minified CSS -->  --}}
     {{--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">  --}}
 
+ 
     <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Shrikhand|Special+Elite" rel="stylesheet">
     {{--  Link to Normalize CSS   --}}
     <link href="{{ asset('css/reset.css') }}" rel="stylesheet">
@@ -25,6 +26,14 @@
     
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Email JavaScript  -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+       (function(){
+          emailjs.init("user_wac982DMbuwf2nYGoJKLx");
+       })();
+    </script>
+  
 </head>
 <body>
    
@@ -48,7 +57,7 @@
                                     <a href="" class="navbar-item"><span class="icon"><i class="fab fa-twitter"></i></span></a>
                                     <a href="" class="navbar-item"><span class="icon"><i class="fab fa-facebook-f"></i></span></a>
                                     <a href="" class="navbar-item"><span class="icon"><i class="fab fa-instagram"></i></span></a>
-                                    <a href="" class="navbar-item"><span class="icon"><i class="far fa-envelope"></i></span></a>
+                                    <a href="/contact" class="navbar-item"><span class="icon"><i class="far fa-envelope"></i></span></a>
                                 
                                 
                                 
@@ -100,6 +109,29 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/main.js') }}"></script>
+
+    <script>
+        var d = new Date();
+        var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+        document.getElementById("date").innerHTML = days[d.getDay()];
+    </script>
+    <script>
+        function initMap() {
+            var uluru = {lat: 28.6668, lng: -81.3773};
+            var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 11,
+            center: uluru
+            });
+            var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+            });
+        }
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiiqjd1K0iSiVBQv8FiLozf2YHiheo6_M&callback=initMap">
+    </script>
+      
 
 </body>
 </html>

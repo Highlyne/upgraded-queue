@@ -20,4 +20,9 @@ class PageController extends Controller
         // This function will return the booking option
         return view('book.index');
     }
+    public function contact()
+    {
+        // This function will return the booking option
+        return view('email');
+    }
 }
