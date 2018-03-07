@@ -17,7 +17,7 @@ class ThresaController extends Controller
         //
         $barberInfo = array("Theresa", "<a id='7wfQaU-1S6VpsgQ4mg7sNg' class='gie-single' href='http://www.gettyimages.com/detail/724228177' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'7wfQaU-1S6VpsgQ4mg7sNg',sig:'909FKwKhYAoKo70fZkgEsr3NWekRQnyycpky32A6LkU=',w:'431px',h:'398px',items:'724228177',caption: false ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>");
         // This function will return the booking option
-        $appts = Jobs::where('barber', 'Theresa')->get();
+        $appts = Jobs::where('barber', 'Theresa')->orderBy('time')->get();
         return view('book.res_form', compact('appts', 'barberInfo'));
     }
 
