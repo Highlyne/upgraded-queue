@@ -20,9 +20,8 @@ class CreateJobsTable extends Migration
             $table->string('name');
             $table->string('barber');
             $table->boolean('confirmed')->default(0);
-            $table->date('created_at')->useCurrent();
-            $table->date('updated_at')->useCurrent();
-           
+            $table->rememberToken();
+            $table->timestamps();           
         });
         
     }

@@ -15,10 +15,10 @@
         </div>
         <div class="column">
             <div class="box">
+                    <h3 id="date"></h3>
                 <table class="table is-fullwidth is-striped">
                     <thead>
                         <tr>
-                            <th>Date</th>
                             <th>Time</th>
                             <th>Name</th>
                         </tr>
@@ -26,7 +26,6 @@
                     <tbody>
                     @foreach ($appts as $appt)
                         <tr>
-                            <td>{{ $appt->book_date }}</td>
                             <td>{{ $appt->time }}</td>
                             <td>{{ $appt->name }}</td>
                         </tr>

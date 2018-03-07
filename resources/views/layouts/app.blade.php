@@ -40,7 +40,7 @@
     <div class="container is-fluid">
     {{--  Here is the nav bar that includes the user login options  --}}
         <div class="block">
-                    <nav class="navbar is-dark">
+                    <nav class="navbar is-dark is-mobile">
                     
                             <!-- Left Side Of Navbar -->
                             {{--  <div class="navbar-brand">
@@ -53,18 +53,9 @@
                                     <a href="{{ url('/') }}"><h3> Hot Cutz </h3></a>
                             </div>
 
-                            <div class="navbar-start">
-                                    <a href="" class="navbar-item"><span class="icon"><i class="fab fa-twitter"></i></span></a>
-                                    <a href="" class="navbar-item"><span class="icon"><i class="fab fa-facebook-f"></i></span></a>
-                                    <a href="" class="navbar-item"><span class="icon"><i class="fab fa-instagram"></i></span></a>
+                            <div class="navbar-start is-mobile">
+                                    <a href="/contact" class="navbar-item"><span class="icon"><i class="fab fa-facebook-f"></i></span></a>
                                     <a href="/contact" class="navbar-item"><span class="icon"><i class="far fa-envelope"></i></span></a>
-                                
-                                
-                                
-                                
-                                
-                                
-                                
                             </div>
                             <!-- Right Side Of Navbar -->
                             <div class="navbar-end navbar-menu is-active">
@@ -81,7 +72,6 @@
                                                             document.getElementById('logout-form').submit();">
                                                 Logout
                                             </a>
-
                                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                                 @csrf
                                             </form>

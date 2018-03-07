@@ -16,16 +16,15 @@
                 <div class="tile is-ancestor">
                     <div class="tile is-4 is-vertical is-parent">
                         <div class="title is-child box">
-                                <p>My Google Maps Demo</p>
+                                <p>Location</p>
                                 <div id="map"></div>
                         </div>
                         
                         <div class="title is-child box">
                                 <p class"title"> Welcome </p>
                                 <br>
-                                <h4>Thank you for visiting our site.  Please feel free to sign in and schedule an appointment with one of 
-                                    our experienced barbers.  If you are not able to plan ahead, take a check out the queue log to find the best
-                                    time to walk in for a hair cut.  We look forward to seeing you real soon. </h4>
+                                <p>Please sign in and schedule an appointment with one of 
+                                    our experienced barbers.  We look forward to seeing you real soon. </p>
                         </div>
                         <div class="tile is-child box">
                                 <p class="title">Shop Hours</p>
