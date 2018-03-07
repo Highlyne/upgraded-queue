@@ -43,7 +43,12 @@
 * PHP
 ### Screenshot of this Project
 
-![Booking page](http://www.giphy.com/gifs/2uIeZevNIC5cPaEjar "Hot Cutz booking")
+![Home page](https://github.com/Highlyne/upgraded-queue/blob/master/public/assets/hmpg2.gif"Hot Cutz Home Page")
+
+![Barbers page](https://github.com/Highlyne/upgraded-queue/blob/master/public/assets/bookpg.gif"Hot Cutz Barbers")
+
+![Booking page](https://github.com/Highlyne/upgraded-queue/blob/master/public/assets/apptpg1.gif "Hot Cutz booking")
+
 
 ---
 
