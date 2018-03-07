@@ -41,7 +41,9 @@
 * HTML5
 * CSS
 * PHP
+### Screenshot of this Project
 
+![Booking page](http://www.giphy.com/gifs/2uIeZevNIC5cPaEjar "Hot Cutz booking")
 
 ---
 
