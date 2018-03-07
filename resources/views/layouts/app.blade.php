@@ -54,8 +54,7 @@
                             </div>
 
                             <div class="navbar-start is-mobile">
-                                    <a href="/contact" class="navbar-item"><span class="icon"><i class="fab fa-facebook-f"></i></span></a>
-                                    <a href="/contact" class="navbar-item"><span class="icon"><i class="far fa-envelope"></i></span></a>
+                                    <a href="/contact" class="navbar-item"><span class="icon"><i class="fas fa-link"></i></span><p>Link Up</p></a>
                             </div>
                             <!-- Right Side Of Navbar -->
                             <div class="navbar-end navbar-menu is-active">
