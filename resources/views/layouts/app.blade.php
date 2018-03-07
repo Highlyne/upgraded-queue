@@ -11,10 +11,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     {{--  <!-- Latest compiled and minified CSS -->  --}}
-    {{--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">  --}}
-    {{--  Link to favicon  --}}
-    {{--  <link rel="icon" type="image/x-icon" href="/path/to/favicon.ico">  --}}
-    < link rel="shortcut icon" href="{{ asset('favicon.ico') }}" >
+    {{--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">  --}} 
     {{--  Lint to google fonts  --}}
     <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Shrikhand|Special+Elite" rel="stylesheet">
     {{--  Link to Normalize CSS   --}}
