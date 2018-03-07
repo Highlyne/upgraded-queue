@@ -8,7 +8,7 @@
 
 ### Live Links
 
-[Hot Cutz Live on Heroku](http://upgraded-queue.herokuapp.com/"Hot Cutz")
+[Hot Cutz Live on Heroku](http://upgraded-queue.herokuapp.com/ "Hot Cutz")
 
 [Hot Cutz repo on Github](https://github.com/Highlyne/upgraded-queue "Hot Cutz")
 
