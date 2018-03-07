@@ -66,7 +66,7 @@ class AdminController extends Controller
         'time'=> $request->time, 
         'name'=> $request->name, 
         'barber'=> $request->barber]);
-        return back();
+        return view('admin.index',compact('jobs'));
     }
 
     /**
@@ -76,11 +76,11 @@ class AdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update($id)
     {
         //
         Jobs::where('id',$id)->update(['confirm'=> 1]); 
-        return back();
+        return view('admin.index',compact('jobs'));
     }
 
     /**

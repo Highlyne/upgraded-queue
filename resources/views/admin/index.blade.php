@@ -12,7 +12,7 @@
 <div class="block">     
     <div class="tile is-parent">
         <div class="tile is-child box">
-            <p class="title">Feb 28, 2018</p>
+                <h3 id="date"></h3>
                 <table class="table is-fullwidth is-striped is-narrow is-bordered">
                     <thead>
                     <tr>
@@ -43,9 +43,6 @@
                             @endif
                         </td>
                         <td><method='get' action="admin/show/{$id}"><a href="admin/show/{{$job->id}}"><i class="fas fa-edit"></i></a></form></td>
-                        <td>< action="/admin/delete/{{$job->id}}">
-                            <a href="/admin/delete/{{ $job->id }}" type="submit"><i class="fas fa-times"></i></a>
-                        
                         </td> 
                     </tr>
                         @endforeach
