@@ -2,16 +2,24 @@
 
 @section('content')
 
-<div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-width="500" data-height="400" 
-data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false">
-<blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore">
-    <a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div>
-{{--  Send and email content  --}}
-<span class="emial">
+{{--  Facebook widget  --}}
+<span class="fb">
     <div class="Columns">  
         <div class="column">
             <div class="box">
-                <h2> Send an Email </h2>
+                <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-width="500" data-height="400" 
+                data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="false">
+                <blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore">
+                    <a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div>
+            </div>
+        </div>
+    </div>
+</span>
+{{--  Send and email content  --}}
+<span class="emial"> 
+    <div class="column">
+        <div class="box">
+            <h4> Send an Email </h4>
                 <form id="myform" onsubmit="emailjs.sendForm('default_service', 'hot_cutz_contact', this); return false;" method="post">
                     <div class="field-label is-normal is-left">
                         <label class="label">Email</label>
@@ -48,9 +56,8 @@ data-small-header="true" data-adapt-container-width="true" data-hide-cover="true
                     Send
                     </button>
                 </form>
-            </div>
         </div>
-    </div>       
+    </div> 
 </span>
 {{--  Modal data  --}}
 <div class="modal">
