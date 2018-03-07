@@ -22,7 +22,6 @@
                         <th>Barber</th>
                         <th>Finished</th>
                         <th>Edit</th>
-                        <th>Delete</th>
                     </tr>
                     </thead>
                     <tbody>

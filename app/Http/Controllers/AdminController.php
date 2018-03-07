@@ -66,7 +66,7 @@ class AdminController extends Controller
         'time'=> $request->time, 
         'name'=> $request->name, 
         'barber'=> $request->barber]);
-        return view('admin.index',compact('jobs'));
+        index();
     }
 
     /**
@@ -80,7 +80,7 @@ class AdminController extends Controller
     {
         //
         Jobs::where('id',$id)->update(['confirm'=> 1]); 
-        return view('admin.index',compact('jobs'));
+        index();
     }
 
     /**
